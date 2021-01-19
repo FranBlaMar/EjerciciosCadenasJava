@@ -5,6 +5,7 @@ public class EjerciciosCadenas {
 		System.out.println(lowCaseInString("HoLa BuenOs DiAs"));
 		System.out.println(upperCaseInString("TenGo MuCHA hamBre"));
 		System.out.println(numberInString("Hoy es 19 del 01 de 2021"));
+		System.out.println(palindrome("Ana lleva al oso la avellana"));
 	}
 	
 	public static int charactersInString (String cadena, char caracter) {
@@ -51,4 +52,18 @@ public class EjerciciosCadenas {
 		return cont;
 	}
 	
+	public static boolean palindrome(String cadena) {
+		StringBuilder cadenaReverse = new StringBuilder (cadena);
+		String cadenaInvertida = new String (cadenaReverse.reverse());
+		cadena= cadena.toUpperCase().replaceAll(" ","");
+		cadenaInvertida= cadenaInvertida.toUpperCase().replaceAll(" ","");
+		if (cadena.compareTo(cadenaInvertida) == 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+		
+		
+	}
 }

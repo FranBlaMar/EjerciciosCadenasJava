@@ -3,6 +3,7 @@ public class EjerciciosCadenas {
 	public static void main (String[] args) {
 		System.out.println(charactersInString("Hola, hoy tengo que hacer cosas", 'h'));
 		System.out.println(lowCaseInString("HoLa BuenOs DiAs"));
+		System.out.println(upperCaseInString("TenGo MuCHA hamBre"));
 	}
 	
 	public static int charactersInString (String cadena, char caracter) {
@@ -23,6 +24,17 @@ public class EjerciciosCadenas {
 		int cont = 0;
 		for (int i=0;i<cadena.length();i++) {
 			if (cadena.charAt(i) == cadenaMinuscula.charAt(i)) {
+				cont ++;
+			}
+		}
+		return cont;
+	}
+	public static int upperCaseInString(String cadena) {
+		String cadenaMayusculas = cadena.toUpperCase().replaceAll(" ","");
+		cadena= cadena.replaceAll(" ","");
+		int cont = 0;
+		for (int i=0;i<cadena.length();i++) {
+			if (cadena.charAt(i) == cadenaMayusculas.charAt(i)) {
 				cont ++;
 			}
 		}

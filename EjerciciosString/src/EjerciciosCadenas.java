@@ -7,6 +7,7 @@ public class EjerciciosCadenas {
 		System.out.println(numberInString("Hoy es 19 del 01 de 2021"));
 		System.out.println(palindrome("Ana lleva al oso la avellana"));
 		System.out.println(hideWord("shybaoxlna", "hola"));
+		System.out.println(replace("Hola soy Fran", "soy", "eres"));
 	}
 	
 	public static int charactersInString (String cadena, char caracter) {
@@ -75,4 +76,8 @@ public class EjerciciosCadenas {
 		}
 		return bandera;
 	}
+	
+	public static String replace(String frase, String palabra, String nuevaPalabra) {
+		return frase.replace(palabra, nuevaPalabra);
+		}
 }

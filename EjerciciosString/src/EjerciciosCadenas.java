@@ -10,6 +10,7 @@ public class EjerciciosCadenas {
 		System.out.println(replace("Hola soy Fran", "soy", "eres"));
 		System.out.println(numberOfVowel("Quiero comer"));
 		System.out.println(consonantesVocales("curso de programacion"));
+		System.out.println(contarPalabras("   He    estudiado  mucho "));
 	}
 	
 	public static int charactersInString (String cadena, char caracter) {
@@ -86,7 +87,7 @@ public class EjerciciosCadenas {
 	public static int numberOfVowel(String cadena) {
 		String vocales= new String ("AEIOU");
 		cadena= cadena.toUpperCase();
-		int cont= 0;
+		int cont= 1;
 		for (int i = 0; i < cadena.length(); i++) {
 			if (vocales.indexOf(cadena.charAt(i)) > 0) {
 				cont++;
@@ -109,5 +110,16 @@ public class EjerciciosCadenas {
 			}
 		}
 		return consonantes.toString() + vocales.toString();
+	}
+	
+	public static int contarPalabras(String cadena) {
+		cadena = cadena.toLowerCase().trim();
+		int cont = 1;
+		for (int i = 0; i < cadena.length(); i++) {
+			if (cadena.charAt(i) == ' ' && cadena.charAt(i+1) != ' ') {
+				cont ++;
+			}
+		}
+		return cont;
 	}
 }

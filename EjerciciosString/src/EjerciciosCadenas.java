@@ -6,6 +6,7 @@ public class EjerciciosCadenas {
 		System.out.println(upperCaseInString("TenGo MuCHA hamBre"));
 		System.out.println(numberInString("Hoy es 19 del 01 de 2021"));
 		System.out.println(palindrome("Ana lleva al oso la avellana"));
+		System.out.println(hideWord("shybaoxlna", "hola"));
 	}
 	
 	public static int charactersInString (String cadena, char caracter) {
@@ -63,7 +64,15 @@ public class EjerciciosCadenas {
 		else {
 			return false;
 		}
-		
-		
+	}
+	
+	public static boolean hideWord(String cadena, String palabra) {
+		boolean bandera = true;
+		for (int i=0;i < palabra.length();i++) {
+			if (cadena.indexOf(palabra.charAt(i)) < 0) {
+				bandera = false;
+			}
+		}
+		return bandera;
 	}
 }

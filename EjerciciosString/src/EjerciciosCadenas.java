@@ -8,6 +8,7 @@ public class EjerciciosCadenas {
 		System.out.println(palindrome("Ana lleva al oso la avellana"));
 		System.out.println(hideWord("shybaoxlna", "hola"));
 		System.out.println(replace("Hola soy Fran", "soy", "eres"));
+		System.out.println(numberOfVowel("Quiero comer"));
 	}
 	
 	public static int charactersInString (String cadena, char caracter) {
@@ -80,4 +81,16 @@ public class EjerciciosCadenas {
 	public static String replace(String frase, String palabra, String nuevaPalabra) {
 		return frase.replace(palabra, nuevaPalabra);
 		}
+	
+	public static int numberOfVowel(String cadena) {
+		String vocales= new String ("AEIOU");
+		cadena= cadena.toUpperCase();
+		int cont= 0;
+		for (int i = 0; i < cadena.length(); i++) {
+			if (vocales.indexOf(cadena.charAt(i)) > 0) {
+				cont++;
+			}
+		}
+		return cont;
+	}
 }

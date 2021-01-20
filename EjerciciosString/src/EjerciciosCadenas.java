@@ -87,7 +87,7 @@ public class EjerciciosCadenas {
 	public static int numberOfVowel(String cadena) {
 		String vocales= new String ("AEIOU");
 		cadena= cadena.toUpperCase();
-		int cont= 1;
+		int cont= 0;
 		for (int i = 0; i < cadena.length(); i++) {
 			if (vocales.indexOf(cadena.charAt(i)) > 0) {
 				cont++;

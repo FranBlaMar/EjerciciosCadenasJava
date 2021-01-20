@@ -9,6 +9,7 @@ public class EjerciciosCadenas {
 		System.out.println(hideWord("shybaoxlna", "hola"));
 		System.out.println(replace("Hola soy Fran", "soy", "eres"));
 		System.out.println(numberOfVowel("Quiero comer"));
+		System.out.println(consonantesVocales("curso de programacion"));
 	}
 	
 	public static int charactersInString (String cadena, char caracter) {
@@ -92,5 +93,21 @@ public class EjerciciosCadenas {
 			}
 		}
 		return cont;
+	}
+	
+	public static String consonantesVocales (String cadena) {
+		StringBuilder consonantes = new StringBuilder ("");
+		StringBuilder vocales = new StringBuilder ("");
+		String vocal = new String ("aeiou");
+		cadena = cadena.toLowerCase().replaceAll(" ","");
+		for (int i= 0; i < cadena.length(); i++) {
+			if (vocal.indexOf(cadena.charAt(i)) >= 0) {
+				vocales.append(cadena.charAt(i));
+			}
+			else { 	
+				consonantes.append(cadena.charAt(i));
+			}
+		}
+		return consonantes.toString() + vocales.toString();
 	}
 }
